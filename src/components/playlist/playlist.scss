@@ -1,6 +1,7 @@
 .playlist {
     display: flex;
     flex-direction: column;
+    min-width: 100%;
 
     .name {
         font-size: 4rem;

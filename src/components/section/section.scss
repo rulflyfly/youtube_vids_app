@@ -1,7 +1,27 @@
+.playlist-section {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-name {
+    font-size: 10rem; 
+}
+
+.playlist-links {
+    display: flex;
+    margin-top: 2rem;
+}
+
 .to-playlist {
-    width: 10rem;
-    height: 10rem;
-    background-color: red;
+    min-width: 17rem;
+    min-height: 17rem;
+    background-color: black;
+
+    &:not(:first-child) {
+        margin-left: 2rem;
+    }
 
     a {
         display: block;

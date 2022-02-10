@@ -1,6 +1,7 @@
 const initialState = {
     playlistId: '',
-    playlistName: ''
+    playlistName: '',
+    sectionName: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -14,6 +15,11 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 playlistName: action.payload
+            }
+        case 'SET_SECTION_NAME':
+            return {
+                ...state,
+                sectionName: action.payload
             }
         default:
             return state;

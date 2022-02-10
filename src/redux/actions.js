@@ -11,3 +11,10 @@ export const setPlaylistNameAction = (name) => {
         payload: name
     }
 }
+
+export const setSectionNameAction = (name) => {
+    return {
+        type: 'SET_SECTION_NAME',
+        payload: name
+    }
+}

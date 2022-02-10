@@ -7,7 +7,7 @@ import {
 import Home from '../home';
 import Enter from '../enter';
 import Playlist from '../playlist';
-import Section from '../section/section';
+import Section from '../section';
 
 function App() {
   return (

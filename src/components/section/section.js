@@ -1,25 +1,26 @@
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { setPlaylistIdAction, setPlaylistNameAction } from '../../redux/actions';
 import { Link } from 'react-router-dom';
+import PlaylistThumbnail from '../playlist_thumbnail';
 import './section.scss';
+import { data } from '../../data/data';
 
-const NAME = 'Programming';
-
-const sectionData = [
-    {
-        id: 'PLCeaAi_Ah78SXMH-qUxjeEz35reRWduKh&ab', 
-        name: 'Unreal Engine C++ Fundamentals'
-    },
-    {
-        id: 'PLCeaAi_Ah78SEV2Q-iVuFbe6xOtQYH6sH&ab_',
-        name: 'Unreal Tutorial C++ - Series - Player Character'
-    }
-]
 
 export default function Section() {
     const dispatch = useDispatch();
     const setPlaylistId = id => dispatch(setPlaylistIdAction(id));
     const setPlaylistName = name => dispatch(setPlaylistNameAction(name));
+
+    const sectionName =  useSelector(state => state.sectionName);
+
+    const [ sectionData, setSectionData ] = useState([]);
+
+    useEffect(() => {
+        data.forEach(el => {
+            if (el.sectionName === sectionName) setSectionData(el.sectionData);
+        })
+    }, [])
 
     function handleClick({id, name}) {
         setPlaylistId(id);
@@ -27,14 +28,18 @@ export default function Section() {
     }
     return (
         <div className='playlist-section'>
-            <span>{ NAME }</span>
-            {sectionData.map(el => {
-                return (
-                    <div key={el.name} className='to-playlist' onClick={() => handleClick(el)}>
-                        <Link to='/playlist'></Link>
-                    </div>
-                )
-            })}
+            <span className='section-name'>{ sectionName }</span>
+            <div className='playlist-links'>
+                {sectionData.map(el => {
+                    return (
+                        <div key={el.name} className='to-playlist' onClick={() => handleClick(el)}>
+                            <Link to='/playlist'>
+                                <PlaylistThumbnail title={el.name} width={272} height={272}/>
+                            </Link>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
