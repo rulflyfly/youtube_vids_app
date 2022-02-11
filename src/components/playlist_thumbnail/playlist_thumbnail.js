@@ -25,7 +25,7 @@ export default ({title, width, height}) => {
 	};
 
 	const draw = (p5) => {
-		p5.background(0);
+		p5.background(255);
 		
 		for (let letter of letters) {
 			letter.moveLeft(p5, letters.length);

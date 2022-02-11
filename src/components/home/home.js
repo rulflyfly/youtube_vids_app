@@ -21,7 +21,7 @@ export default function Home() {
 
     return (
         <div className="home">
-            <span>Choose category</span>
+            <span className='title'>Choose category</span>
             <div className='categories'>
                 { sectionNames.map(name => {
                     return (

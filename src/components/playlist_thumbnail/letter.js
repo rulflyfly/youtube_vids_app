@@ -38,6 +38,6 @@ export default class Letter {
     display(p5, height) {
         p5.textSize(this.width);
         p5.text(this.letter, this.possitionX, height);
-        p5.fill(255);
+        p5.fill(0);
     }
   }
