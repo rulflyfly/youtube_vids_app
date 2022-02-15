@@ -3,6 +3,7 @@ export default class Letter {
       this.letter = letter;
       this.possitionX = posittionX;
       this.width = width;
+      this.speed = 2;
     }
     
     moveRight(p5, lettersAmount) {
@@ -17,7 +18,7 @@ export default class Letter {
         this.possitionX = appearancePoint;
       }
       
-      this.possitionX+=3;
+      this.possitionX+=this.speed;
 
     }
 

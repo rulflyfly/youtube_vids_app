@@ -1,0 +1,13 @@
+@use '../../sass/variables/vars' as v;
+
+.back-link {
+    align-self: flex-start;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    top: -3rem;
+
+    @media (min-width: v.$m) {
+        top: -1rem;
+    }
+}

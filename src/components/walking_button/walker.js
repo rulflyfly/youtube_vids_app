@@ -3,10 +3,11 @@ export default class Walker {
         this.velocity = p5.createVector(0, 0);
         this.acc = p5.createVector(0, 0);
         this.location = p5.createVector(p5.width / 2, p5.height / 2);
-        this.width = 150;
+        this.width = 200;
         this.offSetX = 0;
         this.offSetY = 10000;
         this.r = this.width / 2;
+        this.blink = false;
     }
 
     checkEdges(p5) {
@@ -43,10 +44,13 @@ export default class Walker {
         let addjustX = this.width / 8;
         let addjustY = this.width / 3;;
 
-        if (this.isMouseIn(p5)) p5.fill(106, 161, 33);
-        else p5.fill(255);
+        // if (this.isMouseIn(p5)) p5.fill(106, 161, 33);
+        // else p5.fill(0);
+        p5.fill(this.blink ? p5.random(255) : 0);
+        p5.stroke(255);
+        p5.strokeWeight(3);
         p5.circle(this.location.x, this.location.y, this.width);
-        p5.fill(0);
+        p5.fill(255);
         p5.textSize(this.r)
         p5.text('OK', this.location.x - this.r + addjustX, this.location.y + this.r - addjustY);
     }

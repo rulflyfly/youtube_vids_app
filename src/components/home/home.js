@@ -25,7 +25,7 @@ export default function Home() {
             <div className='categories'>
                 { sectionNames.map(name => {
                     return (
-                        <div onClick={() => setSectionName(name)}>
+                        <div key={name} onClick={() => setSectionName(name)}>
                             <Link to='/section'>{name}</Link>
                         </div>
                     )

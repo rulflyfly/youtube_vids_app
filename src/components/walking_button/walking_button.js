@@ -1,6 +1,6 @@
 import Sketch from "react-p5";
 import { useNavigate } from 'react-router-dom';
-import RobotoMono_Light from '../../static/Roboto_Mono/static/RobotoMono-Light.ttf'
+import RobotoMono_Light from '../../static/Roboto_Mono/static/RobotoMono-ExtraLight.ttf'
 import Walker from './walker';
 
 /** used wave code by Daniel Shiffman
@@ -41,13 +41,13 @@ export default ({width, height}) => {
 	const draw = (p5) => {
 		p5.background(0);
         
-        walker.checkEdges(p5);
-        walker.walk(p5);
-        walker.display(p5);
+    walker.checkEdges(p5);
+    walker.walk(p5);
+    walker.display(p5);
 
-        // wave
-        calcWave(p5);
-        renderWave(p5);
+    // wave
+    calcWave(p5);
+    renderWave(p5);
 	}
 
     function calcWave(p5) {
@@ -70,7 +70,10 @@ export default ({width, height}) => {
 
     const touchStarted = (p5) => {
         if (walker.isMouseIn(p5)) {
-            navigate("/home");
+            walker.blink = true;
+            setTimeout(() => {
+              navigate("/home");
+            }, 1000)
         }
     }
 
