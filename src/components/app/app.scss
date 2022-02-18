@@ -2,13 +2,18 @@
 
 .container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4rem;
     background-color: v.$black;
     color: v.$white;
+
+    @media (v.$s) {
+        padding: 1rem;
+    }
 
     a {
         text-decoration: none;

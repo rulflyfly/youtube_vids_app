@@ -44,13 +44,15 @@ export default class Walker {
         let addjustX = this.width / 8;
         let addjustY = this.width / 3;;
 
-        // if (this.isMouseIn(p5)) p5.fill(106, 161, 33);
-        // else p5.fill(0);
+        if (this.isMouseIn(p5)) p5.stroke(106, 161, 33);
+        else p5.stroke(255);
         p5.fill(this.blink ? p5.random(255) : 0);
-        p5.stroke(255);
+        //p5.stroke(255);
         p5.strokeWeight(3);
         p5.circle(this.location.x, this.location.y, this.width);
-        p5.fill(255);
+        //p5.fill(255);
+        if (this.isMouseIn(p5)) p5.fill(106, 161, 33);
+        else p5.fill(255);
         p5.textSize(this.r)
         p5.text('OK', this.location.x - this.r + addjustX, this.location.y + this.r - addjustY);
     }

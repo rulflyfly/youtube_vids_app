@@ -6,7 +6,7 @@ $black: black;
 $white: white;
 
 // breakpoints
-$s:    540px;
-$m:    768px;
-$md:   980px;
-$l:    1024px;
+$s:    'min-width: 540px';
+$m:    'min-width: 768px';
+$md:   'min-width: 980px';
+$l:    'min-width: 1024px';

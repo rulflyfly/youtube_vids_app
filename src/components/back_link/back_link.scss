@@ -2,12 +2,7 @@
 
 .back-link {
     align-self: flex-start;
-    font-size: 2rem;
-    position: relative;
+    font-size: 1.5rem;
     cursor: pointer;
-    top: -3rem;
-
-    @media (min-width: v.$m) {
-        top: -1rem;
-    }
+    margin-bottom: 1rem;
 }
