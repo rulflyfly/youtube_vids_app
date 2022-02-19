@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf8cc1ac.chunk.css",
-    "main.js": "/static/js/main.ba773af0.chunk.js",
-    "main.js.map": "/static/js/main.ba773af0.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5db9d757.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5db9d757.js.map",
-    "static/js/2.3a8a1377.chunk.js": "/static/js/2.3a8a1377.chunk.js",
-    "static/js/2.3a8a1377.chunk.js.map": "/static/js/2.3a8a1377.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.bf8cc1ac.chunk.css.map": "/static/css/main.bf8cc1ac.chunk.css.map",
-    "static/js/2.3a8a1377.chunk.js.LICENSE.txt": "/static/js/2.3a8a1377.chunk.js.LICENSE.txt",
-    "static/media/RobotoMono-ExtraLight.fd4e93a8.ttf": "/static/media/RobotoMono-ExtraLight.fd4e93a8.ttf",
-    "static/media/main.scss": "/static/media/RobotoMono-Regular.418a8f9f.ttf"
+    "main.css": "/youtube_vids_app/static/css/main.48916ba4.chunk.css",
+    "main.js": "/youtube_vids_app/static/js/main.ba773af0.chunk.js",
+    "main.js.map": "/youtube_vids_app/static/js/main.ba773af0.chunk.js.map",
+    "runtime-main.js": "/youtube_vids_app/static/js/runtime-main.5ec350f6.js",
+    "runtime-main.js.map": "/youtube_vids_app/static/js/runtime-main.5ec350f6.js.map",
+    "static/js/2.3a8a1377.chunk.js": "/youtube_vids_app/static/js/2.3a8a1377.chunk.js",
+    "static/js/2.3a8a1377.chunk.js.map": "/youtube_vids_app/static/js/2.3a8a1377.chunk.js.map",
+    "index.html": "/youtube_vids_app/index.html",
+    "static/css/main.48916ba4.chunk.css.map": "/youtube_vids_app/static/css/main.48916ba4.chunk.css.map",
+    "static/js/2.3a8a1377.chunk.js.LICENSE.txt": "/youtube_vids_app/static/js/2.3a8a1377.chunk.js.LICENSE.txt",
+    "static/media/RobotoMono-ExtraLight.fd4e93a8.ttf": "/youtube_vids_app/static/media/RobotoMono-ExtraLight.fd4e93a8.ttf",
+    "static/media/main.scss": "/youtube_vids_app/static/media/RobotoMono-Regular.418a8f9f.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.5db9d757.js",
+    "static/js/runtime-main.5ec350f6.js",
     "static/js/2.3a8a1377.chunk.js",
-    "static/css/main.bf8cc1ac.chunk.css",
+    "static/css/main.48916ba4.chunk.css",
     "static/js/main.ba773af0.chunk.js"
   ]
 }
