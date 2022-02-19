@@ -7,6 +7,15 @@
     font-size: 5rem;
     display: flex;
     flex-direction: column;
+
+    div a {
+        transition: .5s;
+    }
+
+    div a:hover {
+        color: rgb(0, 180, 216);
+        font-size: 5.1rem;
+    }
 }
 
 .title {

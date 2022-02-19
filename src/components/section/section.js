@@ -4,6 +4,7 @@ import { setPlaylistIdAction, setPlaylistNameAction } from '../../redux/actions'
 import { Link } from 'react-router-dom';
 import PlaylistThumbnail from '../playlist_thumbnail';
 import BackLink from '../back_link/back_link';
+import WaveLoader from '../wave_loader';
 import './section.scss';
 import { data } from '../../data/data';
 
@@ -37,6 +38,9 @@ export default function Section() {
                         <div key={el.name} className='to-playlist' onClick={() => handleClick(el)}>
                             <Link to='/playlist'>
                                 <PlaylistThumbnail title={el.name} width={272} height={272}/>
+                                <div className='wave-hovered'>
+                                    <WaveLoader width={272} height={26} amp={5} p={25}  thickness={3}/>
+                                </div>
                                 <span className='playlist-name'>{el.name}</span>
                             </Link>
                         </div>

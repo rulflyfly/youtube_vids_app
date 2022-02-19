@@ -4,13 +4,13 @@ import Sketch from "react-p5";
  * https://p5js.jp/examples/math-sine-wave.html
  */
 
-export default ({width, height}) => {
+export default ({width, height, amp, p, thickness}) => {
 
     let xspacing = 1; 
     let w; 
     let theta = 0.0; 
-    let amplitude = 10.0; 
-    let period = 50.0; 
+    let amplitude = amp ? amp : 10.0; 
+    let period = p ? p : 50.0; 
     let dx; 
     let yvalues;
 	
@@ -45,8 +45,9 @@ export default ({width, height}) => {
       function renderWave(p5) {
         p5.noStroke();
         p5.fill(0, 180, 216);
+        const t = thickness ? thickness : 5;
         for (let x = 0; x < yvalues.length; x++) {
-          p5.ellipse(x * xspacing, height - 20 + yvalues[x], 5, 5);
+          p5.ellipse(x * xspacing, height - 20 + yvalues[x], t, t);
         }
       }
 

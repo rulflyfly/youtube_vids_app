@@ -78,6 +78,12 @@
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: center;
+            transition: .5s;
+
+            &:hover {
+                border: .5rem solid rgb(0, 180, 216);
+                border-radius: .5rem;
+            }
 
             @media (v.$m) {
                 min-height: 13rem;
